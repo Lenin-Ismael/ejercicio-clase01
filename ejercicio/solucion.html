@@ -6,19 +6,27 @@
         </script>
 
 
-        <h5>Ejemplo 02</h5>
+        <h5>Lenin Ismael Quizhpe Córdova</h5>
         <div class="mermaid">
           classDiagram
-    class BankAccount
-    BankAccount : +String id
-    BankAccount : +Bigdecimal balance
-    BankAccount : +deposit(amount)
-    BankAccount : +withdrawal(amount)
+    class Sancion
+    Sancion : +String observacion
+    Sancion : +int multa
 
-    class Person
-    Person : +String name
-    Person : +int miEdad
-    Person "1" --> "*" BankAccount
+    class Jugador
+    Jugador : +String id
+    Jugador : +String nombre
+    Jugador : +String apellido
+    Jugador : +int miEdad
+    Jugador : +sueldo(amount)
+    Jugador : +copas(amount)
+    Jugador "1" --> "*" Sancion
+
+    class Equipo
+    Equipo : +String deporte
+    Equipo : +int añoCreacion
+    Equipo : +String Ciudad
+    Equipo "1" --> "*" Jugador
 
         </div>
     </body>
